@@ -1,0 +1,13 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  api:
+    lang: ermes-go-redis
+    handler: ./api
+    image: api:latest
+  hello-world:
+    lang: ermes-go
+    handler: ./hello-world
+    image: hello-world:latest
